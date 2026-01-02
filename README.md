@@ -1,7 +1,5 @@
 # FocusHub
-
 FocusHub is an AI-driven personalized cognitive learning and engagement platform designed to transform digital learning into a productive, focused and addictive (in a positive way) experience.
-
 Unlike traditional learning platforms that only deliver content, here FocusHub analyzes learning behaviour, focus patterns, memory decay and engagement signals to build a smart study companion.
 
 # Core Vision
