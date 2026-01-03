@@ -28,9 +28,24 @@ So FocusHub aims to redirect this addictive behaviour into a productive , learni
 using AI and ML.
 
 ## Project Objectives
--Build a focused and distraction-free learning platform.
--Analyze learning behaviour using ML.
--Predict memory decay and schedule smart revision.
--Improve long-term knowledge retention.
--Create positive learning addiction using gamification.
--Provide secure and continuous learning across devices.
+- Build a focused and distraction-free learning platform.
+- Analyze learning behaviour using ML.
+- Predict memory decay and schedule smart revision.
+- Improve long-term knowledge retention.
+- Create positive learning addiction using gamification.
+- Provide secure and continuous learning across devices.
+
+## Core Modules
+- Focus & Behaviour Analysis Engine.
+- Memory Dexay Prediction & Revision Engine.
+- Adaptive Quiz & Difficulty Engine.
+- AI Study Twin & Tutor (planned).
+- Gamification & Learning Streak System.
+- Security & Suspicious Login Detection.
+
+## Development Roadmap
+- Phase 1: Project planning & system design (currently working on this).
+- Phase 2 : Dataset creation & preprocessing.
+- Phase 3 : Core ML model implementation.
+- Phase 4 : Frontend integration.
+- Phase 5 : Testing & Optimization.
