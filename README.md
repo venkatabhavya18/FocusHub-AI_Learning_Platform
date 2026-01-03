@@ -1,9 +1,9 @@
 # FocusHub
-FocusHub is an AI-driven personalized cognitive learning and engagement platform designed to transform digital learning into a productive, focused and addictive (in a positive way) experience.
-Unlike traditional learning platforms that only deliver content, here FocusHub analyzes learning behaviour, focus patterns, memory decay and engagement signals to build a smart study companion.
+FocusHub is an AI-driven personalized cognitive learning and engagement platform designed to transform digital learning into a productive , focused and addictive (in a positive way) experience.
+Unlike traditional learning platforms that only deliver content , here FocusHub analyzes learning behaviour , focus patterns , memory decay and engagement signals to build a smart study companion.
 
 ## Core Vision
-Redirect social media-style dopamine addiction into meaningful learning habits using AI, ML and cognitive psychology.
+Redirect social media-style dopamine addiction into meaningful learning habits using AI , ML and cognitive psychology.
 
 ## Key highlights
 - No camera focus tracking
@@ -13,9 +13,24 @@ Redirect social media-style dopamine addiction into meaningful learning habits u
 - Secure & cross-device learning
 
 ## Tech Stack
-- Frontend: HTML, CSS, JavaScript (React later)
+- Frontend: HTML , CSS , JavaScript (React later)
 - Backend & Database (implemented later)
-- ML : Scikit-Learn, Pandas, NumPy
+- ML : Scikit-Learn , Pandas , NumPy
 
 ## Status of the project
 Project initiated - system design and core logic in progress.
+
+## Project Statement
+Students today spend excessive time on social media wasting their time because of addictive recommendation algorithms.
+This leads to poor focus , weak memory retention and ineffective learning.
+**Existing education platforms fous mainly on content delivery , but do not address focus loss, cognitive overload , memory decay or learning habits.**
+So FocusHub aims to redirect this addictive behaviour into a productive , learning-focused system
+using AI and ML.
+
+## Project Objectives
+-Build a focused and distraction-free learning platform.
+-Analyze learning behaviour using ML.
+-Predict memory decay and schedule smart revision.
+-Improve long-term knowledge retention.
+-Create positive learning addiction using gamification.
+-Provide secure and continuous learning across devices.
