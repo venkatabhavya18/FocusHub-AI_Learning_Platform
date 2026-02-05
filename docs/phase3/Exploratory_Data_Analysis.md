@@ -1,77 +1,100 @@
 # Phase 3 : Exploratory Data Analysis
 
 ## 1.Introduction 
-Exploratory Dta Analysis (EDA) is conducted in the FocusHub system to understand leaner interaction patterns, engagement behaviour, focus trends and memory retention characteristics before building machine learning models. This phase helps in validating feature relevance, identifying behaviour trends and preparing the system for predictive modeling.
-
-EDA ensures the FocusHub is designed based on **data-driven insights** rather than assumptions.
+Exploratory Dta Analysis (EDA) was conducted in the FocusHub system to understand leaner interaction patterns, engagement behaviour, focus trends and memory retention characteristics before building machine learning models. 
+This phase ensures that FocusHub is designed based on  **data-driven insights** rather than assumptions. EDA helps validate feature relevance, identifying behaviour patterns and refine cognitive modeling strategies.
 
 ## 2.Dataset Overview 
-Since FocusHub is a research-oriented academic project, a **synthetic learner interaction dataset** was created to simulate real-world learning behavior. The dataset represents anonymized and randomly generated user interaction logs collected during learning sessions. Ecah record corresponds to a learner session on the FocusHub platform. 
-**Key attibutes analyzed:**
-- User ID
-- Session duration
-- Video watch precentage
-- Pause and rewind frequency
-- Quiz attempt score
--  Time gap between learning and revision
--  Session timestamps
--  Device continuity indicator
-This dataset enables controlled analysis of focus patterns, engagement signals and memory decay trends.
+For Phase 3 implementation, a **structured synthetic dataset** containing **200 learner session records** was created. The dataset simulates anonymized student interaction logs collected during learning sessions on the FocusHub platform.
+Each row represents a unique learner engagement session.
 
-**2.1 Tools Used for EDA**
+### **Key attibutes analyzed:**
+- Student ID
+- Session ID
+- Video ID
+- Watch time(minutes)
+- Pause frequency
+- rewind frequency
+- Quiz Score
+- Stress level
+- Days since last revision
+This dataset enables controlled analysis of focus patterns, engagement signals and memory decay behaviour.
+
+## **3. Tools Used for EDA**
 - Python
 - Pandas and NumPy for data manipulation
-- Matplotlib / Seaborn for visualization of trends
+- Matplotlib / Seaborn for visualization
 - Jupyter Notebook for exploratory analysis
 
-# 3. User Interaction Distribution Analysis 
-User interactio data was analyzed to understand how learner consume educational content on platform. 
-**Analysis Findings :**
-- Most learners prefer short to medium-length study sessions.
-- High pause and rewind frequency is observed for conceptually difficult content.
-- Drop-off patterns are visible in longer videos without engagement triggers.
-These findings justify the need for adaptive content delivery and engagement monitoring in FocusHub.
+## 4. User Interaction Distribution Analysis 
+The dataset was analyzed to understand how learners consume educational content. 
+**Observations:**
+- Watch time ranges between 10-60 minutes.
+- Most sessions fall within moderate engagement duration.
+- High pause and rewind frequency is observed in sessions with lower quiz scores.
 
-# 4. Focus Score Trend Analysis 
-Focus Score are derived using engagement-related features such as:
-- Continuous watch duration
-- Interaction frequency
-- Distraction indicators
-**Analysis Findings:**
-- Higher focus scores are strongly associated with better quiz performance.
-- Focus tends to decrease after prolonged sessions without breaks.
-- Learners with consistent study schedules maintain stable focus levels.
-This analysis supports the design of the Focus Score Computation Model.
+### **Insights :**
+Increased interaction events(pause/rewind) may indicate cognitive difficulty or confusion.
+This jsutifies the need for adaptive content deliveru and engagement monitoring.
 
-# 5. Quiz Performance Analysis 
-Quiz interaction data was analyzed to evaluate learning effectiveness and concept understanding. 
-**Analysis Findings:**
-- Quiz accuracy improves when attempted immediately after focused learning sessions.
-- Repeated incorrect attempts highlight concept-level knowledge gaps.
-- Adaptive quiz difficulty can improve engagement and learning confidence.
-These insights guide the Adaptive Quiz and Difficulty Engine.
+## 5. Focus Behaviour Analysis 
+Focus-related features are derived using:
+- Watch time duration
+- Pause and rewind frequency
+- Stress level indicators
+  
+### **Observations:**
+- Higher watch time generally corresponds to higher quiz performance.
+- Sessions with higher stress levels often show lower focus consistency.
+- Balanced session durations yield better learning outcomes.
 
-# 6. Memory Decay Pattern Observation 
-Memory decay analysis focuses on understanding how knowledge retention changes over time. 
-**Analysis Findings:**
-- Retention decreases as the time gap between revisions increases.
-- Scheduled and periodic revisions improve long-term recall.
-- Different learners exhibit different forgetting rates.
- This analysis forms the basis for the **Memory Decay Prediction and Smart Revision System**.
+### **Insight:**
+Focus stability plays a significant role in quiz accuracy and knowledge retention.This supports the design of the Focus Score Computation Model.
 
-# 7.Correlation Analysis 
-Correlation analysis was conceptually performed between:
-- Focus Score and quiz accuracy
-- Session regularity and retention rate
-- Engagement behviour and learning outcomes
+## 6. Quiz Performance Analysis 
+Quiz interaction data was analyzed to evaluate learning effectiveness.
+### **Analysis Findings:**
+- Quiz scores range between 50-100
+- Higher quiz scores are observed in sessions with:
+  - Lower stress levels
+  - Moderate watch duration
+  - Lower revision gaps
 
-**Key Insight :** 
-Learners with higher focus stability and structured learning behaviour show improved performance and retention.
+### **Insight** :
+Quiz performance is a strong indicator for retention modeling and adaptive difficulty implementation.
 
-# 8. EDA Summary 
-The Exploratory Data Analysis phase provided critical insights into learner behviour, engagement patterns and cognitive trends. 
-These findings directly influenced:
+## 7. Memory Decay Pattern Analysis 
+Memory decay was examined using the feature:
+- Data since last revision
+  
+### **Observations:**
+- As revision gap increases, quiz performance tends to decline.
+- Regular revision correlates with better retention.
+- Retention behaviour varies across learners.
+
+### **Insight** :
+ This validates the need for a Memory Decay Prediction Model within FocusHub.
+
+## 8.Correlation Analysis 
+Conceptual correlation observations include:
+- Watch time (increases) -> Quiz score (increases)
+- Stress level (increases) -> Quiz score (decreases)
+- Revision gap (increases) -> Quiz score (decreases)
+- Pause/Rewind frequency (increases) -> Stress level (increases)
+
+### Key insight:
+Learners with stable focus behaviour and structured revision patterns demonstrate improved performance and retention
+
+## 9. EDA Summary 
+The Exploratory Data Analysis phase provided critical insights into:
+- Engagement behaviour
+- Cognitive load indicators
+- Retention patterns
+- Stress-performance relationships
+These insights directly influenced:
 - Feature selection
 - Model design decisions
-- System architecture refinement
-EDA validates the necessity of FocusHub's AI-driven personalized learning approach.
+- Focus score logic
+- Memory decay modeling
+- Adaptive quiz system
+EDA validates the necessity of FocusHub's AI-driven personalized cognitive learning architecture.
