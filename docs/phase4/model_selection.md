@@ -54,3 +54,10 @@ This document describes the Machine Learning models used in FocusHub and the met
    
 ## Model Selection Summary
 FocusHub prioritizes explainable and lightweight ML models to ensure transparency , performance and scalability.
+
+## Implementation Scope Clarification
+For the current prototype implementation of FocusHub, the primary models developed and tested include:
+- Logistic Regression (Focus Classification)
+- Linear Regression (Memory Decay Prediction)
+
+Other models such as Random Forest, Decision Tree, K-Means Clustering and Collborative Filtering are proposed as extended or future enhancements to improve system scalability and personalization depth.
