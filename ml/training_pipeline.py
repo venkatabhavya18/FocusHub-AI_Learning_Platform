@@ -1,44 +1,27 @@
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LogisticRegression, LinearRegression
-from sklearn.metrics import accuracy_score, mean_absolute_error
+from random_forest_model import train_random_forest
+from decision_tree_model import train_decision_tree
+from kmeans_clustering import perform_kmeans
+from collaborative_filtering import build_user_similarity_matrix
+from recommendation_engine import generate_recommendations
 
-# 1.Load Dataset
-data = pd.read_csv("dataset/student_engagement_dataset.csv")
-print("Dataset Loaded Successfully")
-print("Total Records:", len(data))
+DATA_PATH = "../dataset/student_engagement_dataset.csv"
+def run_training_pipeline():
+  print("-----Training Random Forest-----")
+  rf_model = train_random_forest(DATA_PATH)
+  
+  print("\n-----Training Decision Tree-----")
+  dt_model = train_Decision_tree(DATA_PATH)
+  
+  print("\n -----Performing KMeans Clustering-----")
+  clustered_data = perform_kmeans(DATA_PATH)
+  
+  print("\n -----Building Collaborative Filtering-----")
+  similarity_matrix = build_user_similarity_matrix(DATA_PATH)
+  
+  print("\n-----Generating Sample Recommendations:", recs)
+  recs = generate_recommendations(user_id=1)
+  
+print("\n Full ML Pipeline Completed Successfully!")
 
-# 2.Focus Score Classification
-# creating a simple focus label
-data["focus_label"] = data["quiz_score"].apply(lambda x: 1 if x>=75 else 0)
-
-X_focus = data[["watch_time_minutes", "pause_count" , "rewind_count", "stress_level"]]
-y_focus = data["focus_label"]
-
-X_train, X_test, y_train, y_test = train_test_split(X_focus, y_focus, test_size=0.2, random_state=42)
-
-focus_model = LogisticRegression()
-focus_model.fit(X_train, y_train)
-
-focus_predictions = focus_model.predict(X_test)
-
-focus_accuracy = accuracy_score(y_test, focus_predictions)
-
-print("\n Focus Model Accuracy:", focus_accuracy)
-
-# 3. Memory Decay Prediction
-X_memory = data[["days_since_last_revision", "watch_time_minutes"]]
-y_memory = data["quiz_score"]
-
-X_train_m, X_test_m, y_train_m, y_test_m = train_test_split(X_memory, y_memory, test_size=0.2, random_state=42)
-
-memory_model = LinearRegression()
-memory_model.fit(X_train_m, y_train_m)
-
-memory_predictions = memory_model.predict(X_test_m)
-
-memory_mae = mean_absolute_error(y_test_m, memory_predictions)
-
-print("Memory Decay Model MAE:", memory_mae)
-
-print("\n Training Pipeline Completed Successfully")
+if __name__ == ""__main__":
+run_training_pipeline()
