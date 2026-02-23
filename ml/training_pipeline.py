@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression, LinearRegression
 from sklearn.metrics import accuracy_score, mean_absolute_error
 
 # 1.Load Dataset
-data = pd.read_csv("https://github.com/venkatabhavya18/FocusHub-AI_Learning_Platform/blob/main/dataset/student_engagement_dataset.csv.xlsx")
+data = pd.read_csv("dataset/student_engagement_dataset.csv")
 print("Dataset Loaded Successfully")
 print("Total Records:", len(data))
 
@@ -27,17 +27,17 @@ focus_accuracy = accuracy_score(y_test, focus_predictions)
 print("\n Focus Model Accuracy:", focus_accuracy)
 
 # 3. Memory Decay Prediction
-X_memory = data[["days_since_last_revision", "watch_time_minutes", "quiz_score"]]
+X_memory = data[["days_since_last_revision", "watch_time_minutes"]]
 y_memory = data["quiz_score"]
 
-X_train, X_test, y_train_m, y_test_m = train_test_split(X_memory, y_memory, test_size=0.2, random_state=42)
+X_train_m, X_test_m, y_train_m, y_test_m = train_test_split(X_memory, y_memory, test_size=0.2, random_state=42)
 
 memory_model = LinearRegression()
 memory_model.fit(X_train_m, y_train_m)
 
 memory_predictions = memory_model.predict(X_test_m)
 
-memory_mae = mean_absolute_erro(y_test_m, memory_predictions)
+memory_mae = mean_absolute_error(y_test_m, memory_predictions)
 
 print("Memory Decay Model MAE:", memory_mae)
 
