@@ -56,3 +56,9 @@ using AI and ML.
 
 ## Project Type
 FocusHub is a **web-based learning platform** supported by Machine Learning models to provide personalized study guidance , focus analysis and intelligent recommendations.
+
+
+## Algorithms Used
+1. Logistic Regression - Focus Classification
+2. Linear Regression - Memory Prediction
+3. Collaborative Filtering - Recommendation System
