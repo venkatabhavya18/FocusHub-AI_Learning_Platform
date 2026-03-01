@@ -3,12 +3,15 @@
 This document describes the Machine Learning model architecture and feature engineering strategy used in FocusHub.
 The goal of Phase 4 is to clearly define how user interaction data is transformed into intelligent learning recommendations using explainable ML models.
 
+## ML Architecture Diagram
+![ML Architecture](ml_architecture_diagram.png)
+
 ## 2. High-Level ML Architecture
 The overall ML flow in FocusHub is structured as follow:
 Student Interaction Data
 - Data Preprocessing
 - Feature Engineering
-- ML models
+- Machine Learning models
 - Recommendation Engine
 - Personalized Learning Output
 The system processes engagement , quiz and revision data to generate focus analysis, memory predictions and adaptive recommendations.
@@ -98,3 +101,8 @@ FocusHub prioritizes:
 - Ethical data usage (no biometric tracking)
 The selected models balance performance, interpretability and academic clarity.
 
+## 6. Train-Test Strategy
+For model vaidation and generalization, the dataset is split into:
+- 80% Training Data
+- 20% Testing Data
+This ensures that models are evaluated on unseen data and reduces overfitting risk.
