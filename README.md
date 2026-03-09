@@ -21,8 +21,14 @@ Redirect social media-style dopamine addiction into meaningful learning habits u
 - **Machine Learning** : Scikit-Learn , Pandas , NumPy
 
 ## Status of the project
-Project initiated.
-System design , documentation and core logic in progress.
+The project has completed core planning, dataset preparation and machine learning model development.
+Current progress includes:
+- System architecture design.
+- Machine Learning model implementation.
+- Model optimization and evaluation.
+- Documentation of project phases.
+
+Deployment demonstration and visualization are currently being prepared.
 
 ## Problem Statement
 Students today spend excessive time on social media due to addictive recommendation algorithms.
@@ -41,24 +47,57 @@ using AI and ML.
 
 ## Core Modules
 - Focus & Behaviour Analysis Engine.
-- Memory Dexay Prediction & Revision Engine.
+- Memory Decay Prediction & Revision Engine.
 - Adaptive Quiz & Difficulty Engine.
 - AI Study Twin & Tutor (planned).
 - Gamification & Learning Streak System.
 - Security & Suspicious Login Detection.
 
 ## Development Roadmap
-- Phase 1: Project planning & system design (currently working on this).
-- Phase 2 : Dataset creation & preprocessing.
-- Phase 3 : Core ML model implementation.
-- Phase 4 : Frontend integration.
-- Phase 5 : Testing & Optimization.
+- Phase 1: Project planning & system design ✔
+- Phase 2 : Dataset creation & preprocessing ✔
+- Phase 3 : Machine Learning model implementation ✔
+- Phase 4 : Model Optimization & Evaluation ✔
+- Phase 5 : Deployment demonstration (in progress)
 
+## Project Phases
+- Phase 1 : Proposal and Problem Definition
+- Phase 2 : Literature Review
+- Phase 3 : Dataset Collection and Preprocessing
+- Phase 4 : System Design and Model Architecture
+- Phase 5 : Model Implementation
+- Phase 6 : Optimization and Evaluation
+- Phase 7 : Deployment and Visualization
+- Phase 8 : Documentation and Final Presentation
+  
 ## Project Type
 FocusHub is a **web-based learning platform** supported by Machine Learning models to provide personalized study guidance , focus analysis and intelligent recommendations.
-
 
 ## Algorithms Used
 1. Logistic Regression - Focus Classification
 2. Linear Regression - Memory Prediction
 3. Collaborative Filtering - Recommendation System
+
+## Repository Structure
+
+FocusHub/
+|
+|__ dataset/
+|__ ml/
+|   |__random_forest_model.py
+|   |__decision_tree_model.py
+|   |__kmeans_clustering.py
+|   |__collaborative_filtering.py
+|   |__recommendation_engine.py
+|
+|__ docs/
+|   |__ phase1/
+|   |__ phase2/
+|   |__ phase3/
+|   |__ phase4/
+|   |__ phase5/
+|   |__ phase6/
+|   |__ phase7/
+|
+|__ demo.py
+|__ README.md
