@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 
+
 def train_random_forest(data_path):
 
     # Load dataset
@@ -28,3 +29,4 @@ def train_random_forest(data_path):
     print("Random Forest Accuracy:", accuracy)
 
     return model
+    
